@@ -602,7 +602,7 @@ function requestFromWebWorker(url, callback, charset, crossorigin) {
       // 在这些浏览器中，只能采用 onreadystatechange 来设置。每一次的 node.readState
       // 的改变，都会调用这个函数，所以可以通过在 onreadystatechange 中设置。
       node.onreadystatechange = function() {
-        if (/loadede|complete/.test(node.readyState)) {
+        if (/loaded|complete/.test(node.readyState)) {
           onload();
         }
       }
